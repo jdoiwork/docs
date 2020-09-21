@@ -9,6 +9,8 @@ services:
       - .:/workspace:cached
       - cabal_repo:/root/.cabal
       - vscode-server:/root/.vscode-server
+    ports:
+      - "8000:8000"
     
 volumes:
   cabal_repo:

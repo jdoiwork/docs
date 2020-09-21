@@ -27,6 +27,13 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+    match ("**/*.md" .&&. complement ("dist**/*.md")) $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            -- >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
+
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -62,11 +69,12 @@ main = hakyllWith config $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%Y-%m-%d" `mappend`
     defaultContext
 
 
 config :: Configuration
-config = defaultConfiguration {
-    destinationDirectory = "../docs"
-}
+config = defaultConfiguration
+    { destinationDirectory = "../docs"
+    , previewHost = "0.0.0.0"
+    }

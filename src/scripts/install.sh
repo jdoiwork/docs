@@ -1,1 +1,1 @@
-cabal new-install my-site
+cabal new-install my-site --overwrite-policy=always

@@ -1,1 +1,1 @@
-cabal new-run site build
+cabal new-run my-site -- watch
