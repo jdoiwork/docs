@@ -2,6 +2,4 @@
 title: Blender
 ---
 
-# Hi Blender
-
-about blender
+[公式マニュアル](https://docs.blender.org/manual/en/latest/)
