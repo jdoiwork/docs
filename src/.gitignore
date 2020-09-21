@@ -1,0 +1,5 @@
+dist
+dist-newstyle
+.ghc.*
+_site
+_cache
