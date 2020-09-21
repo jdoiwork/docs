@@ -1,1 +1,1 @@
-cabal new-install site
+cabal new-install my-site
