@@ -7,3 +7,10 @@ minikube version
 ```bash
 minikube start
 ```
+
+# kubectl version
+
+```
+kubectl version
+```
+
