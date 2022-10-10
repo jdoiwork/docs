@@ -1,4 +1,4 @@
-# Minikube start
+# Cluster up and running
 
 ```bash
 minikube version
@@ -8,13 +8,13 @@ minikube version
 minikube start
 ```
 
-# kubectl version
+# Cluster version
 
 ```bash
 kubectl version
 ```
 
-# kubectl cluster
+# Cluster details
 
 ```bash
 kubectl cluster-info
